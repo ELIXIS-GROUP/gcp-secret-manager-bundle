@@ -14,8 +14,8 @@ class GcpSecretManagerExtension extends Extension{
     {
                 
         $configs = $this->processConfiguration(new Configuration(), $configs);
-        $container->setParameter('gcp.secret_manager.project_id', $configs['gcp_client_config']['project_id']);
-        $container->setParameter('gcp.secret_manager.keyfilepath', $configs['gcp_client_config']['keyfilepath']);
+        $container->setParameter('gcp.secret_manager.project_id', $configs['secret_manager_client_config']['project_id']);
+        $container->setParameter('gcp.secret_manager.keyfilepath', $configs['secret_manager_client_config']['keyfilepath']);
         $container->setParameter('gcp.secret_manager.ignore', $configs['ignore']);
         $container->setParameter('gcp.secret_manager.delimiter', $configs['delimiter']);
 

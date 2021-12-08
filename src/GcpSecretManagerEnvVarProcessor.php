@@ -1,10 +1,10 @@
 <?php
 
-namespace GcpSecretManager\GcpSecretManagerBundle;
+namespace ElixisGroup\GcpSecretManagerBundle;
 
 use Closure;
-use GcpSecretManager\GcpSecretManagerBundle\Exception\GcpSecretManagerException;
-use GcpSecretManager\GcpSecretManagerBundle\Provider\GcpSecretManagerProvider;
+use ElixisGroup\GcpSecretManagerBundle\Exception\GcpSecretManagerException;
+use ElixisGroup\GcpSecretManagerBundle\Provider\GcpSecretManagerProvider;
 use Symfony\Component\DependencyInjection\EnvVarProcessorInterface;
 
 class GcpSecretManagerEnvVarProcessor implements EnvVarProcessorInterface

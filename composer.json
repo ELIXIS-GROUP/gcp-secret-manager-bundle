@@ -1,0 +1,34 @@
+{
+    "name": "elixis-group/gcp-secret-manager-bundle",
+    "description": "Use GCP Secrets as service container parameters in Symfony, and provided provider class to access secrets value.",
+    "keywords": ["Symfony", "GCP", "GOOGLE CLOUD PLATFOM", "GOOGLE CLOUD", "ENV", "Secrets Manager"],
+    "license": "MIT",
+    "readme" : "/readme.md",
+    "version" : "0.0.1-beta",
+    "time" : "2021-08-12",
+    "type": "symfony-bundle",
+    "autoload": {
+        "psr-4": {
+            "ElixisGroup\\GcpSecretManagerBundle\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Anthony Papillaud",
+            "email": "apapillaud@elixis.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=7.1.3",
+        "symfony/flex": "^1.17",
+        "google/apiclient": "^2.12",
+        "google/cloud-secret-manager": "^1.7",
+        "symfony/dependency-injection": "^5.4",
+        "symfony/yaml": "5.4.*",
+        "phpunit/phpunit": "8.5.*"
+    },
+    "require-dev": {
+        "symfony/phpunit-bridge": "5.3.*"
+    }
+}

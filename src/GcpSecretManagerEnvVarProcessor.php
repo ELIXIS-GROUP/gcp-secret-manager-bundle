@@ -1,5 +1,12 @@
 <?php
 
+/*
+ * This file is part of the gcp-secret-manager-bundle application.
+ * (c) Anthony Papillaud <apapillaud@elixis.com>
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 namespace ElixisGroup\GcpSecretManagerBundle;
 
 use Closure;
@@ -9,7 +16,6 @@ use Symfony\Component\DependencyInjection\EnvVarProcessorInterface;
 
 class GcpSecretManagerEnvVarProcessor implements EnvVarProcessorInterface
 {
-
     /**
      * @var GcpSecretManagerProvider
      */
@@ -45,23 +51,22 @@ class GcpSecretManagerEnvVarProcessor implements EnvVarProcessorInterface
      */
     public function getEnv(string $prefix, string $name, Closure $getEnv)
     {
-        if( $this->_ignore === true ){
+        if (true === $this->_ignore) {
             return $getEnv($name);
         }
 
         $value = $getEnv($name);
-        if( "" !== $value ){
-
+        if ('' !== $value) {
             $parts = explode($this->_delimiter, $value);
 
-            if( 1 == count($parts) ){
-                throw new GcpSecretManagerException("Env Var for get secret is not formatted correctly. See Documentation for more information : http://....fr.");
+            if (1 == count($parts)) {
+                throw new GcpSecretManagerException('Env Var for get secret is not formatted correctly. See Documentation for more information : http://....fr.');
             }
-            
+
             list($secretId, $secretVersion) = $parts;
             $value = $this->_provider->get($secretId, $secretVersion);
-
         }
+
         return $value;
     }
 
@@ -74,5 +79,4 @@ class GcpSecretManagerEnvVarProcessor implements EnvVarProcessorInterface
             'gcp' => 'bool|int|float|string',
         ];
     }
-
 }

@@ -13,10 +13,14 @@ use Google\Cloud\SecretManager\V1\SecretManagerServiceClient;
 
 class GcpSecretManagerClientFactory
 {
-    public static function createClient(string $keyfilepath): SecretManagerServiceClient
+    public static function createClient(?string $keyfilepath): SecretManagerServiceClient
     {
-        putenv('GOOGLE_APPLICATION_CREDENTIALS='.$keyfilepath);
+
+        if( is_null($keyfilepath) ){
+            putenv('GOOGLE_APPLICATION_CREDENTIALS='.$keyfilepath);
+        }
 
         return new SecretManagerServiceClient();
+        
     }
 }

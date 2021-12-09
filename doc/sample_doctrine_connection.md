@@ -1,7 +1,6 @@
 # Example: Configure Doctrine Bundle in Symfony to GCP Secret Manager Bundle
 
 ## Step #1 : Create secret in GCP Console
----
 Begin to create secret in Gcp Console : For memory see official documentation
 [https://cloud.google.com/secret-manager/docs/creating-and-accessing-secrets#secretmanager-create-secret-console](https://cloud.google.com/secret-manager/docs/creating-and-accessing-secrets#secretmanager-create-secret-console).    
 
@@ -14,7 +13,6 @@ Secret Version : 1
 _* For this sample replace var {db_****} by your values _
 
 ## Step #2 : Load Secret in env var
----
 Add the following to .env :
 ```
 # .env

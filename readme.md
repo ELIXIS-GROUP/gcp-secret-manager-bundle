@@ -4,18 +4,15 @@
 Use GCP Secrets as service container parameters in Symfony, and provided provider class to access secrets value.
 
 ## Prerequisites
----
 Configure Secret Manager in your project Google Cloud, see following article who explain how create and configure Google Secret Manager [https://cloud.google.com/secret-manager/docs/configuring-secret-manager](https://cloud.google.com/secret-manager/docs/configuring-secret-manager).    
 
 *Warning in local dev environment, you need create a service account to set global var GOOGLE_APPLICATION_CREDENTIALS. See [https://cloud.google.com/iam/docs/service-accounts#user-managed](https://cloud.google.com/iam/docs/service-accounts#user-managed).*
 
 ## Installation
----
 ```
 $ composer require gcp-secret-manager-bundle
 ```
 ## Configuration
----
 By default, configuration for this bundle is loaded from config/packages/gcp_secret_manager.yaml file or its environment specific.    
 
 The following configuration properties are available:
@@ -30,7 +27,6 @@ gcp_secret_manager:
     ignore: false # Pass through GCP Secret Manager (for local dev environments set to "true").
 ```
 ## Default usage
----
 Set an env var to an AWS Secret Manager Secret name and Secret version separate by the separator define in config or the default one, like so:
 ```
 #.env
@@ -47,7 +43,6 @@ parameters:
     secret_env_var: '%env(gcp:SECRET_ENV_VAR)%'
 ```
 ## Service Container Usage
----
 A standalone service container is also available if you don't want use a service container parameters.
 
 ```
@@ -64,8 +59,6 @@ class AcmeController extends AbstractController
 ```
 
 ## Examples
----
-
 * [Configure Doctrine Bundle in Symfony to GCP Secret Manager Bundle](https://github.com/ELIXIS-GROUP/gcp-secret-manager-bundle/blob/master/doc/sample_doctrine_connection.md)
 
 

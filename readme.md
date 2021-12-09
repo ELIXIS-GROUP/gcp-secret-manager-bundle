@@ -9,9 +9,20 @@ Configure Secret Manager in your project Google Cloud, see following article who
 *Warning in local dev environment, you need create a service account to set global var GOOGLE_APPLICATION_CREDENTIALS. See [https://cloud.google.com/iam/docs/service-accounts#user-managed](https://cloud.google.com/iam/docs/service-accounts#user-managed).*
 
 ## Installation
+__Warning ! Befor install bundle, a minimal configuration is required.__     
+Create file ```config/packages/gcp_secret_manager.yaml``` and add the following.
+```
+#config/packages/gcp_secret_manager.yaml
+
+gcp_secret_manager:
+    secret_manager_client_config:
+        keyfilepath: '%kernel.project_dir%/google_application_credentials.json' # Google Credentials path
+
+```
 ```
 $ composer require gcp-secret-manager-bundle
 ```
+
 ## Configuration
 By default, configuration for this bundle is loaded from config/packages/gcp_secret_manager.yaml file or its environment specific.    
 
@@ -24,8 +35,9 @@ gcp_secret_manager:
         project_id: 'projectId' # Google Cloud project id
         keyfilepath: '%kernel.project_dir%/google_application_credentials.json' # Google Credentials path
     delimiter: ':' # Delimiter to separate secret name from secret version
-    ignore: false # Pass through GCP Secret Manager (for local dev environments set to "true").
+    ignore: false # Pass through GCP Secret Manager (if you don't use set to "true").
 ```
+
 ## Default usage
 Set an env var to an AWS Secret Manager Secret name and Secret version separate by the separator define in config or the default one, like so:
 ```

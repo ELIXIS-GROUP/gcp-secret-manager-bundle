@@ -16,7 +16,7 @@ class GcpSecretManagerClientFactory
     public static function createClient(?string $keyfilepath): SecretManagerServiceClient
     {
 
-        if( is_null($keyfilepath) ){
+        if( !is_null($keyfilepath) ){
             putenv('GOOGLE_APPLICATION_CREDENTIALS='.$keyfilepath);
         }
 

@@ -9,7 +9,9 @@ Configure Secret Manager in your project Google Cloud, see following article who
 *Warning in local dev environment, you need create a service account to set global var GOOGLE_APPLICATION_CREDENTIALS. See [https://cloud.google.com/iam/docs/service-accounts#user-managed](https://cloud.google.com/iam/docs/service-accounts#user-managed).*
 
 ## Installation
-__Warning ! Befor install bundle, a minimal configuration is required.__     
+__Warning ! Befor install bundle, a minimal configuration is required. 
+Google Secret Manager need a global var GOOGLE_APPLICATION_CREDENTIALS.__
+
 Create file ```config/packages/gcp_secret_manager.yaml``` and add the following.
 ```
 #config/packages/gcp_secret_manager.yaml

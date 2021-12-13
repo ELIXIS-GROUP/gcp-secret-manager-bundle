@@ -1,5 +1,5 @@
 # GCP Secret Manager Bundle for Symfony
-*Version 1.0.0* Created *2021/08/12* Last Update *2021/09/12*    
+*Version 1.0.0* Created *2021/08/12* Last Update *2021/13/12*    
 
 Use GCP Secrets as service container parameters in Symfony, and provided provider class to access secrets value.
 
@@ -25,6 +25,14 @@ gcp_secret_manager:
 $ composer require gcp-secret-manager-bundle
 ```
 
+Activating GCP Secret Manager Bundle.
+
+```
+#config/bundles.php
+
+ElixisGroup\GcpSecretManagerBundle\GcpSecretManagerBundle::class => ['all' => true],
+
+```
 ## Configuration
 By default, configuration for this bundle is loaded from config/packages/gcp_secret_manager.yaml file or its environment specific.    
 

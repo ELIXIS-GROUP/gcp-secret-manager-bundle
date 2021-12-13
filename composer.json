@@ -4,7 +4,7 @@
     "keywords": ["Symfony", "GCP", "GOOGLE CLOUD PLATFOM", "GOOGLE CLOUD", "ENV", "Secrets Manager"],
     "license": "MIT",
     "readme" : "/readme.md",
-    "version" : "0.0.1-beta",
+    "version" : "1.0.0",
     "time" : "2021-08-12",
     "type": "symfony-bundle",
     "autoload": {

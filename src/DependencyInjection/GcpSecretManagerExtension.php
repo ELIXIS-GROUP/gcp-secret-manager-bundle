@@ -32,7 +32,7 @@ class GcpSecretManagerExtension extends Extension
     {
     }
 
-    public function getAlias()
+    public function getAlias(): string
     {
         return parent::getAlias();
     }

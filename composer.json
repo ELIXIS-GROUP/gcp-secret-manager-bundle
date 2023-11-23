@@ -4,8 +4,8 @@
     "keywords": ["Symfony", "GCP", "GOOGLE CLOUD PLATFOM", "GOOGLE CLOUD", "ENV", "Secrets Manager"],
     "license": "MIT",
     "readme" : "/readme.md",
-    "version" : "1.0.0",
-    "time" : "2021-08-12",
+    "version" : "2.0.0",
+    "time" : "2023-23-11",
     "type": "symfony-bundle",
     "autoload": {
         "psr-4": {
@@ -20,18 +20,23 @@
     ],
     "minimum-stability": "stable",
     "require": {
-        "php": ">=7.1.3",
-        "symfony/flex": "^1.17",
-        "google/apiclient": "^2.12",
-        "google/cloud-secret-manager": "^1.7",
-        "symfony/dependency-injection": "^5.4",
-        "symfony/yaml": "^5.4",
-        "phpunit/phpunit": "8.5.*"
+        "php": ">=7.4",
+        "symfony/flex": "^1.21",
+        "google/apiclient": "^2.15",
+        "google/cloud-secret-manager": "^1.12",
+        "symfony/dependency-injection": "^5.4|^6.3",
+        "symfony/yaml": "^5.4|^6.3",
+        "phpunit/phpunit": "^9.6"
     },
     "require-dev": {
-        "symfony/phpunit-bridge": "5.3.*",
+        "symfony/phpunit-bridge": "^5.4|^6.3",
         "friendsofphp/php-cs-fixer": "^3.3",
         "phpstan/phpstan": "^1.2",
-        "symfony/framework-bundle": "^5.4"
+        "symfony/framework-bundle": "^5.4|^6.3"
+    },
+    "config": {
+        "allow-plugins": {
+            "symfony/flex": true
+        }
     }
 }

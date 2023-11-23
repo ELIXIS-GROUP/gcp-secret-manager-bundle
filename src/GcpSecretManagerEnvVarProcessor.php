@@ -49,7 +49,7 @@ class GcpSecretManagerEnvVarProcessor implements EnvVarProcessorInterface
      *
      * @throws RuntimeException on error
      */
-    public function getEnv(string $prefix, string $name, Closure $getEnv)
+    public function getEnv(string $prefix, string $name, Closure $getEnv): mixed
     {
         if (true === $this->_ignore) {
             return $getEnv($name);
@@ -73,7 +73,7 @@ class GcpSecretManagerEnvVarProcessor implements EnvVarProcessorInterface
     /**
      * @return string[] The PHP-types managed by getEnv(), keyed by prefixes
      */
-    public static function getProvidedTypes()
+    public static function getProvidedTypes(): array
     {
         return [
             'gcp' => 'bool|int|float|string',

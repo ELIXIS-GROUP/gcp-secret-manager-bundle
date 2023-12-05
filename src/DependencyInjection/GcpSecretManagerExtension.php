@@ -16,7 +16,7 @@ use Symfony\Component\Config\FileLocator;
 
 class GcpSecretManagerExtension extends Extension
 {
-    public function load(array $configs, ContainerBuilder $container)
+    public function load(array $configs, ContainerBuilder $container): void
     {
         $configs = $this->processConfiguration(new Configuration(), $configs);
         $container->setParameter('gcp.secret_manager.project_id', $configs['secret_manager_client_config']['project_id']);

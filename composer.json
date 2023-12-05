@@ -21,7 +21,7 @@
     "minimum-stability": "stable",
     "require": {
         "php": ">=7.4",
-        "symfony/flex": "^1.21",
+        "symfony/flex": "^2.4",
         "google/apiclient": "^2.15",
         "google/cloud-secret-manager": "^1.12",
         "symfony/dependency-injection": "^5.4|^6.0|^6.4",

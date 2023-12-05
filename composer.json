@@ -4,8 +4,8 @@
     "keywords": ["Symfony", "GCP", "GOOGLE CLOUD PLATFOM", "GOOGLE CLOUD", "ENV", "Secrets Manager"],
     "license": "MIT",
     "readme" : "/readme.md",
-    "version" : "2.0.2",
-    "time" : "2023-11-30",
+    "version" : "2.0.1",
+    "time" : "2023-12-05",
     "type": "symfony-bundle",
     "autoload": {
         "psr-4": {

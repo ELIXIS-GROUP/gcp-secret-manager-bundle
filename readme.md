@@ -1,5 +1,5 @@
 # GCP Secret Manager Bundle for Symfony
-*Version 1.0.0* Created *2021/08/12* Last Update *2021/13/12*    
+*Version 2.0.2* Created *2021/08/12* Last Update *2023/12/05*    
 
 Use GCP Secrets as service container parameters in Symfony, and provided provider class to access secrets value.
 

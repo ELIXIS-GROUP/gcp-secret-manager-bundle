@@ -5,7 +5,7 @@
     "license": "MIT",
     "readme" : "/readme.md",
     "version" : "2.0.1",
-    "time" : "2023-11-23",
+    "time" : "2023-12-05",
     "type": "symfony-bundle",
     "autoload": {
         "psr-4": {
@@ -21,18 +21,18 @@
     "minimum-stability": "stable",
     "require": {
         "php": ">=7.4",
-        "symfony/flex": "^1.21",
+        "symfony/flex": "^2.4",
         "google/apiclient": "^2.15",
         "google/cloud-secret-manager": "^1.12",
-        "symfony/dependency-injection": "^5.4|^6.3",
-        "symfony/yaml": "^5.4|^6.3",
+        "symfony/dependency-injection": "^5.4|^6.0|^6.4",
+        "symfony/yaml": "^5.4|^6.0|^6.4",
         "phpunit/phpunit": "^9.6"
     },
     "require-dev": {
-        "symfony/phpunit-bridge": "^5.4|^6.3",
+        "symfony/phpunit-bridge": "^5.4|^6.0|^6.4",
         "friendsofphp/php-cs-fixer": "^3.3",
         "phpstan/phpstan": "^1.2",
-        "symfony/framework-bundle": "^5.4|^6.3"
+        "symfony/framework-bundle": "^5.4|^6.0|^6.4"
     },
     "config": {
         "allow-plugins": {

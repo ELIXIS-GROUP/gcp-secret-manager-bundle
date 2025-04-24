@@ -4,8 +4,8 @@
     "keywords": ["Symfony", "GCP", "GOOGLE CLOUD PLATFOM", "GOOGLE CLOUD", "ENV", "Secrets Manager"],
     "license": "MIT",
     "readme" : "/readme.md",
-    "version" : "2.0.2",
-    "time" : "2023-12-05",
+    "version" : "2.0.3",
+    "time" : "2025-04-18",
     "type": "symfony-bundle",
     "autoload": {
         "psr-4": {
@@ -22,7 +22,6 @@
     "require": {
         "php": ">=7.4",
         "symfony/flex": "^2.4",
-        "google/apiclient": "^2.15",
         "google/cloud-secret-manager": "^1.12",
         "symfony/dependency-injection": "^5.4|^6.0|^6.4",
         "symfony/yaml": "^5.4|^6.0|^6.4",
